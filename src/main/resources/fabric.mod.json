@@ -1,29 +1,29 @@
 {
   "schemaVersion": 1,
-  "id": "template",
+  "id": "afletching",
   "version": "${version}",
 
-  "name": "Template",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "name": "Aros's fletching",
+  "description": "Use fletching table, create new types of arrows!",
   "authors": [
     "Aros"
   ],
   "contact": {
     "homepage": "https://github.com/YarikProgs",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "sources": "https://github.com/YarikProgs/ArosFletching"
   },
 
   "license": "MIT",
-  "icon": "assets/template/icon.png",
+  "icon": "assets/afletching/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.aros.template.TemplateMod"
+      "net.aros.afletching.ArosFletching"
     ]
   },
   "mixins": [
-    "template.mixins.json"
+    "afletching.mixins.json"
   ],
 
   "depends": {
