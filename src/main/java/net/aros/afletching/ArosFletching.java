@@ -1,5 +1,7 @@
 package net.aros.afletching;
 
+import net.aros.afletching.init.ModOtherThings;
+import net.aros.afletching.init.ModRecipes;
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -11,5 +13,7 @@ public class ArosFletching implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		LOGGER.info("Aros's fletching is initializing!");
+		ModRecipes.init();
+		ModOtherThings.init();
 	}
 }

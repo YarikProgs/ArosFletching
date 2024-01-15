@@ -1,0 +1,20 @@
+{
+  "type": "afletching:fletching",
+  "ingredients": {
+    "arrowhead": {
+      "item": "minecraft:flint"
+    },
+    "shaft": {
+      "item": "minecraft:stick"
+    },
+    "fletching": {
+      "item": "minecraft:feather"
+    },
+    "ingredient1": null,
+    "ingredient2": null
+  },
+  "output": {
+    "id": "minecraft:arrow",
+    "count": 6
+  }
+}

@@ -20,6 +20,9 @@
   "entrypoints": {
     "main": [
       "net.aros.afletching.ArosFletching"
+    ],
+    "client": [
+      "net.aros.afletching.ArosFletchingClient"
     ]
   },
   "mixins": [
