@@ -16,6 +16,7 @@ import net.minecraft.screen.slot.Slot;
 import net.minecraft.screen.slot.SlotActionType;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.NotNull;
+
 import java.util.List;
 
 public class FletchingScreenHandler extends ScreenHandler {

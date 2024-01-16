@@ -3,6 +3,7 @@ package net.aros.afletching.screen.widgets;
 import net.minecraft.inventory.Inventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.screen.slot.Slot;
+
 import java.util.function.Predicate;
 
 public class IngredientSlot extends Slot {
