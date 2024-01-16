@@ -37,7 +37,7 @@ public class TntArrowItem extends ArrowItem {
         boolean breaking = isBreakingBlocks(stack);
 
         tooltip.add(Text.literal("♦ ").append(Text.translatable("tnt_arrow." + MOD_ID + ".explosion_power").append(Text.literal(": "))).formatted(Formatting.GRAY).append(Text.literal(power+"").formatted(Formatting.GOLD)));
-        tooltip.add(Text.literal("♦ ").append(Text.translatable("tnt_arrow." + MOD_ID + ".breaking_blocks").append(Text.literal(": "))).formatted(Formatting.GRAY).append(Text.literal(breaking+"").formatted(breaking ? Formatting.GREEN : Formatting.RED)));
+        if (breaking) tooltip.add(Text.literal("♦ ").append(Text.translatable("tnt_arrow." + MOD_ID + ".breaking_blocks")).formatted(Formatting.RED));
 
         super.appendTooltip(stack, world, tooltip, context);
     }
