@@ -2,9 +2,13 @@ package net.aros.afletching.recipes;
 
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
+import com.mojang.brigadier.exceptions.CommandSyntaxException;
+import net.aros.afletching.ArosFletching;
 import net.aros.afletching.screen.FletchingScreenHandler;
 import net.minecraft.inventory.SimpleInventory;
 import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NbtCompound;
+import net.minecraft.nbt.StringNbtReader;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.recipe.*;
 import net.minecraft.util.Identifier;
@@ -38,8 +42,10 @@ public class FletchingRecipe implements Recipe<SimpleInventory> {
         return arrowhead.test(inventory.getStack(FletchingScreenHandler.ARROWHEAD)) &&
                shaft.test(inventory.getStack(FletchingScreenHandler.SHAFT)) &&
                fletching.test(inventory.getStack(FletchingScreenHandler.FLETCHING)) &&
-               ingredient1.test(inventory.getStack(FletchingScreenHandler.INGREDIENT_1)) &&
-               ingredient2.test(inventory.getStack(FletchingScreenHandler.INGREDIENT_2));
+               (ingredient1.test(inventory.getStack(FletchingScreenHandler.INGREDIENT_1)) &&
+               ingredient2.test(inventory.getStack(FletchingScreenHandler.INGREDIENT_2)) ||
+                       ingredient1.test(inventory.getStack(FletchingScreenHandler.INGREDIENT_2)) &&
+                               ingredient2.test(inventory.getStack(FletchingScreenHandler.INGREDIENT_1)));
     }
 
     @Override
@@ -84,6 +90,15 @@ public class FletchingRecipe implements Recipe<SimpleInventory> {
                     Registry.ITEM.get(new Identifier(outputJson.getAsJsonPrimitive("id").getAsString())),
                     outputJson.getAsJsonPrimitive("count").getAsInt()
             );
+            if (outputJson.has("nbt")) {
+                String nbtString = outputJson.get("nbt").isJsonNull() ? "{}" : outputJson.get("nbt").getAsJsonObject().toString();
+
+                try {
+                    output.setNbt(StringNbtReader.parse(nbtString));
+                } catch (CommandSyntaxException e) {
+                    ArosFletching.LOGGER.error("Cannot read recipe \"{}\". Error: {}", id.toString(), e.getMessage());
+                }
+            }
             Ingredient arrowhead = Ingredient.fromJson(ingredients.getAsJsonObject("arrowhead"));
             Ingredient shaft = Ingredient.fromJson(ingredients.getAsJsonObject("shaft"));
             Ingredient fletching = Ingredient.fromJson(ingredients.getAsJsonObject("fletching"));

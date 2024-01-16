@@ -1,4 +1,11 @@
 {
   "container.fletching": "Crafting arrows",
-  "item.minecraft.arrow": "Common arrow"
+  "item.minecraft.arrow": "Common arrow",
+
+  "tnt_arrow.afletching.explosion_power": "Explosion power",
+  "tnt_arrow.afletching.breaking_blocks": "Breaks blocks",
+  "glowing_arrow.afletching.light_level": "Light level",
+
+  "item.afletching.tnt_arrow": "Tnt arrow",
+  "item.afletching.glowing_arrow": "Glowing arrow"
 }

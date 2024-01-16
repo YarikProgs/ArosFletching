@@ -1,0 +1,24 @@
+{
+  "type": "afletching:fletching",
+  "ingredients": {
+    "arrowhead": {
+      "item": "minecraft:flint"
+    },
+    "shaft": {
+      "item": "minecraft:stick"
+    },
+    "fletching": {
+      "item": "minecraft:feather"
+    },
+    "ingredient1": {
+      "item": "minecraft:glowstone_dust"
+    },
+    "ingredient2": {
+      "item": "minecraft:glowstone_dust"
+    }
+  },
+  "output": {
+    "id": "minecraft:spectral_arrow",
+    "count": 4
+  }
+}

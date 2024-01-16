@@ -1,4 +1,11 @@
 {
   "container.fletching": "Создание стрел",
-  "item.minecraft.arrow": "Обычная стрела"
+  "item.minecraft.arrow": "Обычная стрела",
+
+  "tnt_arrow.afletching.explosion_power": "Сила взрыва",
+  "tnt_arrow.afletching.breaking_blocks": "Ломает блоки",
+  "glowing_arrow.afletching.light_level": "Уровень света",
+
+  "item.afletching.tnt_arrow": "Стрела-динамит",
+  "item.afletching.glowing_arrow": "Светящаяся стрела"
 }

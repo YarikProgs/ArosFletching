@@ -1,5 +1,7 @@
 package net.aros.afletching;
 
+import net.aros.afletching.init.ModEntityTypes;
+import net.aros.afletching.init.ModItems;
 import net.aros.afletching.init.ModOtherThings;
 import net.aros.afletching.init.ModRecipes;
 import net.fabricmc.api.ModInitializer;
@@ -15,5 +17,7 @@ public class ArosFletching implements ModInitializer {
 		LOGGER.info("Aros's fletching is initializing!");
 		ModRecipes.init();
 		ModOtherThings.init();
+		ModItems.init();
+		ModEntityTypes.init();
 	}
 }

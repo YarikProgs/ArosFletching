@@ -1,0 +1,25 @@
+{
+  "type": "afletching:fletching",
+  "ingredients": {
+    "arrowhead": {
+      "item": "minecraft:flint"
+    },
+    "shaft": {
+      "item": "minecraft:stick"
+    },
+    "fletching": {
+      "item": "minecraft:feather"
+    },
+    "ingredient1": {
+      "item": "minecraft:glow_berries"
+    },
+    "ingredient2": null
+  },
+  "output": {
+    "id": "afletching:glowing_arrow",
+    "nbt": {
+      "LightLevel": 11
+    },
+    "count": 4
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "type": "afletching:fletching",
+  "ingredients": {
+    "arrowhead": {
+      "item": "minecraft:flint"
+    },
+    "shaft": {
+      "item": "minecraft:stick"
+    },
+    "fletching": {
+      "item": "minecraft:feather"
+    },
+    "ingredient1": {
+      "item": "minecraft:gunpowder"
+    },
+    "ingredient2": null
+  },
+  "output": {
+    "id": "afletching:tnt_arrow",
+    "nbt": {
+      "ExplosionPower": 0.5,
+      "BreakingBlocks": false
+    },
+    "count": 2
+  }
+}
