@@ -7,7 +7,6 @@ import net.aros.afletching.ArosFletching;
 import net.aros.afletching.screen.FletchingScreenHandler;
 import net.minecraft.inventory.SimpleInventory;
 import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NbtCompound;
 import net.minecraft.nbt.StringNbtReader;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.recipe.*;
