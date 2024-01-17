@@ -23,6 +23,9 @@
     ],
     "client": [
       "net.aros.afletching.ArosFletchingClient"
+    ],
+    "emi": [
+      "net.aros.afletching.integrations.emi.ArosFletchingEmi"
     ]
   },
   "mixins": [

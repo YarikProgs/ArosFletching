@@ -1,5 +1,6 @@
 {
   "container.fletching": "Crafting arrows",
+  "emi.category.minecraft.fletching_table": "Crafting arrows",
   "item.minecraft.arrow": "Common arrow",
 
   "tnt_arrow.afletching.explosion_power": "Explosion power",
