@@ -6,7 +6,9 @@
   "tnt_arrow.afletching.explosion_power": "Сила взрыва",
   "tnt_arrow.afletching.breaking_blocks": "Ломает блоки",
   "glowing_arrow.afletching.light_level": "Уровень света",
+  "prismarine_arrow.afletching.water_slowdown": "Не замедляется в воде",
 
   "item.afletching.tnt_arrow": "Стрела-динамит",
-  "item.afletching.glowing_arrow": "Светящаяся стрела"
+  "item.afletching.glowing_arrow": "Светящаяся стрела",
+  "item.afletching.prismarine_arrow": "Призмариновая стрела"
 }

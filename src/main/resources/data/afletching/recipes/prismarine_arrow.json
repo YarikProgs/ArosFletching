@@ -1,0 +1,20 @@
+{
+  "type": "afletching:fletching",
+  "ingredients": {
+    "arrowhead": {
+      "item": "minecraft:prismarine_shard"
+    },
+    "shaft": {
+      "item": "minecraft:prismarine_crystals"
+    },
+    "fletching": {
+      "item": "minecraft:prismarine_crystals"
+    },
+    "ingredient1": null,
+    "ingredient2": null
+  },
+  "output": {
+    "id": "afletching:prismarine_arrow",
+    "count": 3
+  }
+}

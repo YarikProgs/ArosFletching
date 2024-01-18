@@ -18,5 +18,6 @@ public class ArosFletchingClient implements ClientModInitializer {
 
         EntityRendererRegistry.register(ModEntityTypes.TNT_ARROW, ctx -> new CustomArrowRenderer(ctx, new Identifier(MOD_ID, "textures/entity/projectiles/tnt_arrow.png")));
         EntityRendererRegistry.register(ModEntityTypes.GLOWING_ARROW, ctx -> new CustomArrowRenderer(ctx, new Identifier(MOD_ID, "textures/entity/projectiles/glowing_arrow.png")));
+        EntityRendererRegistry.register(ModEntityTypes.PRISMARINE_ARROW, ctx -> new CustomArrowRenderer(ctx, new Identifier(MOD_ID, "textures/entity/projectiles/prismarine_arrow.png")));
     }
 }
