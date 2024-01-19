@@ -1,0 +1,24 @@
+{
+  "type": "afletching:fletching",
+  "ingredients": {
+    "arrowhead": {
+      "item": "minecraft:flint"
+    },
+    "shaft": {
+      "item": "minecraft:stick"
+    },
+    "fletching": {
+      "item": "minecraft:feather"
+    },
+    "ingredient1": {
+      "item": "minecraft:chest"
+    },
+    "ingredient2": {
+      "item": "minecraft:leather"
+    }
+  },
+  "output": {
+    "id": "afletching:messenger_arrow",
+    "count": 1
+  }
+}
