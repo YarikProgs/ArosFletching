@@ -16,6 +16,7 @@ public class ModEntityTypes {
     public static final EntityType<GlowingArrowEntity> GLOWING_ARROW = register("glowing_arrow", createProjectile(GlowingArrowEntity::new));
     public static final EntityType<PrismarineArrowEntity> PRISMARINE_ARROW = register("prismarine_arrow", createProjectile(PrismarineArrowEntity::new));
     public static final EntityType<TerracottaArrowEntity> TERRACOTTA_ARROW = register("terracotta_arrow", createProjectile(TerracottaArrowEntity::new));
+    public static final EntityType<BeginnerArrowEntity> BEGINNER_ARROW = register("beginner_arrow", createProjectile(BeginnerArrowEntity::new));
     public static final EntityType<CeramicShardEntity> CERAMIC_SHARD = register("ceramic_shard", createProjectile(CeramicShardEntity::new, .5f, .2f));
 
     private static <I extends PersistentProjectileEntity> EntityType<I> createProjectile(EntityType.EntityFactory<I> factory) {

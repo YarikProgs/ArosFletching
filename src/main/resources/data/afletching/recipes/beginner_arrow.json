@@ -1,0 +1,20 @@
+{
+  "type": "afletching:fletching",
+  "ingredients": {
+    "arrowhead": {
+      "item": "minecraft:iron_nugget"
+    },
+    "shaft": {
+      "item": "minecraft:stick"
+    },
+    "fletching": {
+      "item": "minecraft:paper"
+    },
+    "ingredient1": null,
+    "ingredient2": null
+  },
+  "output": {
+    "id": "afletching:beginner_arrow",
+    "count": 2
+  }
+}

@@ -10,9 +10,11 @@
   "terracotta_arrow.afletching.has_shards.p1": "Upon hitting the entity,",
   "terracotta_arrow.afletching.has_shards.p2": "releases ceramic shards",
   "terracotta_arrow.afletching.breaks": "Breaks on any collision",
+  "beginner_arrow.afletching.damage": "Damage is significantly lower",
 
   "item.afletching.tnt_arrow": "Tnt arrow",
   "item.afletching.glowing_arrow": "Glowing arrow",
   "item.afletching.prismarine_arrow": "Prismarine arrow",
-  "item.afletching.terracotta_arrow": "Terracotta arrow"
+  "item.afletching.terracotta_arrow": "Terracotta arrow",
+  "item.afletching.beginner_arrow": "Beginner's arrow"
 }
