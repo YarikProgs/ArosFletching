@@ -7,8 +7,12 @@
   "tnt_arrow.afletching.breaking_blocks": "Ломает блоки",
   "glowing_arrow.afletching.light_level": "Уровень света",
   "prismarine_arrow.afletching.water_slowdown": "Не замедляется в воде",
+  "terracotta_arrow.afletching.has_shards.p1": "После попадания в сущность",
+  "terracotta_arrow.afletching.has_shards.p2": "выпускает керамические осколки",
+  "terracotta_arrow.afletching.breaks": "Ломается при любом столкновении",
 
   "item.afletching.tnt_arrow": "Стрела-динамит",
   "item.afletching.glowing_arrow": "Светящаяся стрела",
-  "item.afletching.prismarine_arrow": "Призмариновая стрела"
+  "item.afletching.prismarine_arrow": "Призмариновая стрела",
+  "item.afletching.terracotta_arrow": "Стрела из терракоты"
 }

@@ -2,6 +2,7 @@ package net.aros.afletching.init;
 
 import net.aros.afletching.items.GlowingArrowItem;
 import net.aros.afletching.items.PrismarineArrowItem;
+import net.aros.afletching.items.TerracottaArrowItem;
 import net.aros.afletching.items.TntArrowItem;
 import net.minecraft.item.Item;
 import net.minecraft.util.Identifier;
@@ -13,6 +14,7 @@ public class ModItems {
     public static final TntArrowItem TNT_ARROW = register("tnt_arrow", new TntArrowItem());
     public static final GlowingArrowItem GLOWING_ARROW = register("glowing_arrow", new GlowingArrowItem());
     public static final PrismarineArrowItem RRISMARINE_ARROW = register("prismarine_arrow", new PrismarineArrowItem());
+    public static final TerracottaArrowItem TERRACOTTA_ARROW = register("terracotta_arrow", new TerracottaArrowItem());
 
     static <I extends Item> I register(String name, I item) {
         return Registry.register(Registry.ITEM, new Identifier(MOD_ID, name), item);

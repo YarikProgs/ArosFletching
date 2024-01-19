@@ -1,8 +1,6 @@
 package net.aros.afletching.init;
 
-import net.aros.afletching.projectiles.GlowingArrowEntity;
-import net.aros.afletching.projectiles.PrismarineArrowEntity;
-import net.aros.afletching.projectiles.TntArrowEntity;
+import net.aros.afletching.projectiles.*;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
 import net.minecraft.entity.EntityDimensions;
 import net.minecraft.entity.EntityType;
@@ -14,13 +12,20 @@ import net.minecraft.util.registry.Registry;
 import static net.aros.afletching.ArosFletching.MOD_ID;
 
 public class ModEntityTypes {
-    public static final EntityType<TntArrowEntity> TNT_ARROW = register("tnt_arrow", createArrow(TntArrowEntity::new));
-    public static final EntityType<GlowingArrowEntity> GLOWING_ARROW = register("glowing_arrow", createArrow(GlowingArrowEntity::new));
-    public static final EntityType<PrismarineArrowEntity> PRISMARINE_ARROW = register("prismarine_arrow", createArrow(PrismarineArrowEntity::new));
+    public static final EntityType<TntArrowEntity> TNT_ARROW = register("tnt_arrow", createProjectile(TntArrowEntity::new));
+    public static final EntityType<GlowingArrowEntity> GLOWING_ARROW = register("glowing_arrow", createProjectile(GlowingArrowEntity::new));
+    public static final EntityType<PrismarineArrowEntity> PRISMARINE_ARROW = register("prismarine_arrow", createProjectile(PrismarineArrowEntity::new));
+    public static final EntityType<TerracottaArrowEntity> TERRACOTTA_ARROW = register("terracotta_arrow", createProjectile(TerracottaArrowEntity::new));
+    public static final EntityType<CeramicShardEntity> CERAMIC_SHARD = register("ceramic_shard", createProjectile(CeramicShardEntity::new, .5f, .2f));
 
-    private static <I extends PersistentProjectileEntity> EntityType<I> createArrow(EntityType.EntityFactory<I> factory) {
-        return FabricEntityTypeBuilder.create(SpawnGroup.MISC, factory).dimensions(new EntityDimensions(.5f, .5f, true)).trackRangeBlocks(4).trackedUpdateRate(20).build();
+    private static <I extends PersistentProjectileEntity> EntityType<I> createProjectile(EntityType.EntityFactory<I> factory) {
+        return createProjectile(factory, .5f, .5f);
     }
+
+    private static <I extends PersistentProjectileEntity> EntityType<I> createProjectile(EntityType.EntityFactory<I> factory, float width, float height) {
+        return FabricEntityTypeBuilder.create(SpawnGroup.MISC, factory).dimensions(new EntityDimensions(width, height, true)).trackRangeBlocks(4).trackedUpdateRate(20).build();
+    }
+
     static <I extends EntityType<?>> I register(String name, I obj) {
         return Registry.register(Registry.ENTITY_TYPE, new Identifier(MOD_ID, name), obj);
     }

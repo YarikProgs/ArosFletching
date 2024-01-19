@@ -1,0 +1,12 @@
+{
+  "terracotta_arrow.block_hit": {
+    "sounds": [
+      "afletching:break_block"
+    ]
+  },
+  "terracotta_arrow.entity_hit": {
+    "sounds": [
+      "afletching:break_entity"
+    ]
+  }
+}

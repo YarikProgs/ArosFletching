@@ -1,9 +1,6 @@
 package net.aros.afletching;
 
-import net.aros.afletching.init.ModEntityTypes;
-import net.aros.afletching.init.ModItems;
-import net.aros.afletching.init.ModOtherThings;
-import net.aros.afletching.init.ModRecipes;
+import net.aros.afletching.init.*;
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,6 +15,7 @@ public class ArosFletching implements ModInitializer {
 		ModRecipes.init();
 		ModOtherThings.init();
 		ModItems.init();
+		ModSounds.init();
 		ModEntityTypes.init();
 	}
 }

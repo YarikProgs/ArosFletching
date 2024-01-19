@@ -1,5 +1,6 @@
 package net.aros.afletching;
 
+import net.aros.afletching.client.CeramicShardRenderer;
 import net.aros.afletching.client.CustomArrowRenderer;
 import net.aros.afletching.init.ModEntityTypes;
 import net.aros.afletching.init.ModOtherThings;
@@ -19,5 +20,7 @@ public class ArosFletchingClient implements ClientModInitializer {
         EntityRendererRegistry.register(ModEntityTypes.TNT_ARROW, ctx -> new CustomArrowRenderer(ctx, new Identifier(MOD_ID, "textures/entity/projectiles/tnt_arrow.png")));
         EntityRendererRegistry.register(ModEntityTypes.GLOWING_ARROW, ctx -> new CustomArrowRenderer(ctx, new Identifier(MOD_ID, "textures/entity/projectiles/glowing_arrow.png")));
         EntityRendererRegistry.register(ModEntityTypes.PRISMARINE_ARROW, ctx -> new CustomArrowRenderer(ctx, new Identifier(MOD_ID, "textures/entity/projectiles/prismarine_arrow.png")));
+        EntityRendererRegistry.register(ModEntityTypes.TERRACOTTA_ARROW, ctx -> new CustomArrowRenderer(ctx, new Identifier(MOD_ID, "textures/entity/projectiles/terracotta_arrow.png")));
+        EntityRendererRegistry.register(ModEntityTypes.CERAMIC_SHARD, CeramicShardRenderer::new);
     }
 }
