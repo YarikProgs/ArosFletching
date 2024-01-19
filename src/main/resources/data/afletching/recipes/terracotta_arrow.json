@@ -1,0 +1,20 @@
+{
+  "type": "afletching:fletching",
+  "ingredients": {
+    "arrowhead": {
+      "item": "minecraft:terracotta"
+    },
+    "shaft": {
+      "item": "minecraft:stick"
+    },
+    "fletching": {
+      "item": "minecraft:feather"
+    },
+    "ingredient1": null,
+    "ingredient2": null
+  },
+  "output": {
+    "id": "afletching:terracotta_arrow",
+    "count": 4
+  }
+}
