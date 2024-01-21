@@ -14,8 +14,9 @@ public class ArosFletching implements ModInitializer {
 		LOGGER.info("Aros's fletching is initializing!");
 		ModRecipes.init();
 		ModOtherThings.init();
+		ModEntityTypes.init();
 		ModItems.init();
 		ModSounds.init();
-		ModEntityTypes.init();
+		ModEffects.init();
 	}
 }

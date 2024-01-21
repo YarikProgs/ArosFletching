@@ -1,0 +1,22 @@
+{
+  "type": "afletching:fletching",
+  "ingredients": {
+    "arrowhead": {
+      "item": "minecraft:netherite_scrap"
+    },
+    "shaft": {
+      "item": "minecraft:stick"
+    },
+    "fletching": {
+      "item": "minecraft:warped_roots"
+    },
+    "ingredient1": {
+      "item": "minecraft:warped_fungus"
+    },
+    "ingredient2": null
+  },
+  "output": {
+    "id": "afletching:warped_arrow",
+    "count": 4
+  }
+}

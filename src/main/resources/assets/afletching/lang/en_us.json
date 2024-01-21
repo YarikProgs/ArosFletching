@@ -12,11 +12,27 @@
   "terracotta_arrow.afletching.breaks": "Breaks on any collision",
   "beginner_arrow.afletching.damage": "Damage is significantly lower",
   "messenger_arrow.afletching.items": "Stores one item. Shoot, send!",
+  "crimson_arrow.afletching.effect": "When hit, applies §4rage§r effect",
+  "warped_arrow.afletching.effect": "When hit, applies §3confusion§r effect",
+
+  "effect.afletching.rage": "Rage",
+  "effect.afletching.rage.desc0": "Rage - the mob becomes aggressive",
+  "effect.afletching.rage.desc1": "towards all entities nearby.",
+  "effect.afletching.rage.desc2": "Works with most entities.",
+  "effect.afletching.rage.desc3": "When it hits the player, they become enraged.",
+  "effect.afletching.confusion": "Confusion",
+  "effect.afletching.confusion.desc0": "Confusion - the mob temporarily doesn't",
+  "effect.afletching.confusion.desc1": "see its targets for attack.",
+  "effect.afletching.confusion.desc2": "Works with most entities.",
+  "effect.afletching.confusion.desc3": "If a player is hit, he will not be able",
+  "effect.afletching.confusion.desc4": "to open any screen or switch slots",
 
   "item.afletching.tnt_arrow": "Tnt arrow",
   "item.afletching.glowing_arrow": "Glowing arrow",
   "item.afletching.prismarine_arrow": "Prismarine arrow",
   "item.afletching.terracotta_arrow": "Terracotta arrow",
   "item.afletching.beginner_arrow": "Beginner's arrow",
-  "item.afletching.messenger_arrow": "Arrow-messenger"
+  "item.afletching.messenger_arrow": "Arrow-messenger",
+  "item.afletching.crimson_arrow": "Crimson arrow",
+  "item.afletching.warped_arrow": "Warped arrow"
 }

@@ -12,11 +12,27 @@
   "terracotta_arrow.afletching.breaks": "Ломается при любом столкновении",
   "beginner_arrow.afletching.damage": "Урон значительно ниже",
   "messenger_arrow.afletching.items": "Хранит один предмет. Стреляйте, посылайте!",
+  "crimson_arrow.afletching.effect": "При попадании накладывает эффект §cярости§r",
+  "warped_arrow.afletching.effect": "При попадании накладывает эффект §3запутанности§r",
+
+  "effect.afletching.rage": "Ярость",
+  "effect.afletching.rage.desc0": "Ярость - моб становится агрессивным",
+  "effect.afletching.rage.desc1": "ко всем сущностям поблизости.",
+  "effect.afletching.rage.desc2": "Работает с большинством сущностей.",
+  "effect.afletching.rage.desc3": "При попадании в игрока он становиться бешеным.",
+  "effect.afletching.confusion": "Запутанность",
+  "effect.afletching.confusion.desc0": "Запутанность - моб временно не видит",
+  "effect.afletching.confusion.desc1": "своих целей для атаки.",
+  "effect.afletching.confusion.desc2": "Работает с большинством сущностей.",
+  "effect.afletching.confusion.desc3": "При попадании в игрока он не сможет открывать",
+  "effect.afletching.confusion.desc4": "любой экран и переключать слоты",
 
   "item.afletching.tnt_arrow": "Стрела-динамит",
   "item.afletching.glowing_arrow": "Светящаяся стрела",
   "item.afletching.prismarine_arrow": "Призмариновая стрела",
   "item.afletching.terracotta_arrow": "Стрела из терракоты",
   "item.afletching.beginner_arrow": "Стрела начинающего",
-  "item.afletching.messenger_arrow": "Стрела-вестник"
+  "item.afletching.messenger_arrow": "Стрела-вестник",
+  "item.afletching.crimson_arrow": "Багровая стрела",
+  "item.afletching.warped_arrow": "Искажённая стрела"
 }
