@@ -28,6 +28,8 @@ public class ModItems {
     public static final MessengerArrowItem MESSENGER_ARROW = register("messenger_arrow", new MessengerArrowItem());
     public static final CrimsonArrowItem CRIMSON_ARROW = register("crimson_arrow", new CrimsonArrowItem());
     public static final WarpedArrowItem WARPED_ARROW = register("warped_arrow", new WarpedArrowItem());
+    public static final OblivionArrowItem OBLIVION_ARROW = register("oblivion_arrow", new OblivionArrowItem());
+    public static final SightArrowItem SIGHT_ARROW = register("sight_arrow", new SightArrowItem());
 
     static <I extends Item> I register(String name, I item) {
         return register(name, item, true);

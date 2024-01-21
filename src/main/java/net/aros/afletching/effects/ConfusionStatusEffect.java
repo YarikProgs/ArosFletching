@@ -17,8 +17,6 @@ public class ConfusionStatusEffect extends StatusEffect {
     public void onRemoved(LivingEntity entity, AttributeContainer attributes, int amplifier) {
         super.onRemoved(entity, attributes, amplifier);
         if (entity instanceof MobEntity mob && !mob.world.isClient) {
-            System.out.println("G: " + mob.goalSelector.getGoals());
-            System.out.println("T: " + mob.targetSelector.getGoals());
             mob.goalSelector = new GoalSelector(mob.world.getProfilerSupplier());
             mob.targetSelector = new GoalSelector(mob.world.getProfilerSupplier());
             mob.initGoals();

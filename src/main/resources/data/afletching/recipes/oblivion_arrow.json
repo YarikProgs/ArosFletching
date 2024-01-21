@@ -1,0 +1,24 @@
+{
+  "type": "afletching:fletching",
+  "ingredients": {
+    "arrowhead": {
+      "item": "minecraft:netherite_ingot"
+    },
+    "shaft": {
+      "item": "minecraft:quartz"
+    },
+    "fletching": {
+      "item": "minecraft:nether_star"
+    },
+    "ingredient1": {
+      "item": "minecraft:netherite_ingot"
+    },
+    "ingredient2": {
+      "item": "minecraft:netherite_ingot"
+    }
+  },
+  "output": {
+    "id": "afletching:oblivion_arrow",
+    "count": 2
+  }
+}

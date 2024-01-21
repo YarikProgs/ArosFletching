@@ -1,0 +1,20 @@
+{
+  "type": "afletching:fletching",
+  "ingredients": {
+    "arrowhead": {
+      "item": "minecraft:amethyst_shard"
+    },
+    "shaft": {
+      "item": "minecraft:quartz"
+    },
+    "fletching": {
+      "item": "minecraft:ender_eye"
+    },
+    "ingredient1": null,
+    "ingredient2": null
+  },
+  "output": {
+    "id": "afletching:sight_arrow",
+    "count": 2
+  }
+}

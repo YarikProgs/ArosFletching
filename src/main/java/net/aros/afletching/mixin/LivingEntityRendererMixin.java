@@ -1,6 +1,7 @@
 package net.aros.afletching.mixin;
 
 import net.aros.afletching.init.ModEffects;
+import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.render.OverlayTexture;
 import net.minecraft.client.render.entity.LivingEntityRenderer;
 import net.minecraft.entity.LivingEntity;
@@ -17,4 +18,9 @@ public class LivingEntityRendererMixin {
             cir.setReturnValue(OverlayTexture.packUv(OverlayTexture.getU(whiteOverlayProgress), OverlayTexture.getV(true)));
     }
 
+    @Inject(method = "isVisible", at = @At("HEAD"), cancellable = true)
+    private void isVisibleInject(LivingEntity entity, CallbackInfoReturnable<Boolean> cir) {
+        MinecraftClient client = MinecraftClient.getInstance();
+        if (client != null && client.player != null && client.player.hasStatusEffect(ModEffects.ALL_SEEING)) cir.setReturnValue(true);
+    }
 }

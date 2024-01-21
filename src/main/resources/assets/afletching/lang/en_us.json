@@ -26,6 +26,15 @@
   "effect.afletching.confusion.desc2": "Works with most entities.",
   "effect.afletching.confusion.desc3": "If a player is hit, he will not be able",
   "effect.afletching.confusion.desc4": "to open any screen or switch slots",
+  "effect.afletching.all_seeing": "All-seeing",
+  "effect.afletching.all_seeing.desc0": "All-seeing - Allows the player",
+  "effect.afletching.all_seeing.desc1": "to see invisible entities",
+  "item.afletching.oblivion_arrow.desc0": "Permanently erases the entity's AI.",
+  "item.afletching.oblivion_arrow.desc1": "When hitting a player, permanently",
+  "item.afletching.oblivion_arrow.desc2": "applies §3confusion§r effect",
+  "item.afletching.sight_arrow.desc0": "Makes the entity unable to despawn.",
+  "item.afletching.sight_arrow.desc1": "When hitting a player,",
+  "item.afletching.sight_arrow.desc2": "applies §2all-seeing§r effect",
 
   "item.afletching.tnt_arrow": "Tnt arrow",
   "item.afletching.glowing_arrow": "Glowing arrow",
@@ -34,5 +43,7 @@
   "item.afletching.beginner_arrow": "Beginner's arrow",
   "item.afletching.messenger_arrow": "Arrow-messenger",
   "item.afletching.crimson_arrow": "Crimson arrow",
-  "item.afletching.warped_arrow": "Warped arrow"
+  "item.afletching.warped_arrow": "Warped arrow",
+  "item.afletching.oblivion_arrow": "\"The oblivion\"",
+  "item.afletching.sight_arrow": "\"The sight\""
 }

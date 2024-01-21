@@ -20,6 +20,8 @@ public class ModEntityTypes {
     public static final EntityType<MessengerArrowEntity> MESSENGER_ARROW = register("messenger_arrow", createProjectile(MessengerArrowEntity::new));
     public static final EntityType<CrimsonArrowEntity> CRIMSON_ARROW = register("crimson_arrow", createProjectile(CrimsonArrowEntity::new));
     public static final EntityType<WarpedArrowEntity> WARPED_ARROW = register("warped_arrow", createProjectile(WarpedArrowEntity::new));
+    public static final EntityType<OblivionArrowEntity> OBLIVION_ARROW = register("oblivion_arrow", createProjectile(OblivionArrowEntity::new));
+    public static final EntityType<SightArrowEntity> SIGHT_ARROW = register("sight_arrow", createProjectile(SightArrowEntity::new));
     public static final EntityType<CeramicShardEntity> CERAMIC_SHARD = register("ceramic_shard", createProjectile(CeramicShardEntity::new, .5f, .2f));
 
     private static <I extends PersistentProjectileEntity> EntityType<I> createProjectile(EntityType.EntityFactory<I> factory) {

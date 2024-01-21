@@ -25,6 +25,8 @@ public class ArosFletchingClient implements ClientModInitializer {
         EntityRendererRegistry.register(ModEntityTypes.MESSENGER_ARROW, ctx -> new CustomArrowRenderer(ctx, new Identifier(MOD_ID, "textures/entity/projectiles/messenger_arrow.png")));
         EntityRendererRegistry.register(ModEntityTypes.CRIMSON_ARROW, ctx -> new CustomArrowRenderer(ctx, new Identifier(MOD_ID, "textures/entity/projectiles/crimson_arrow.png")));
         EntityRendererRegistry.register(ModEntityTypes.WARPED_ARROW, ctx -> new CustomArrowRenderer(ctx, new Identifier(MOD_ID, "textures/entity/projectiles/warped_arrow.png")));
+        EntityRendererRegistry.register(ModEntityTypes.OBLIVION_ARROW, ctx -> new CustomArrowRenderer(ctx, new Identifier(MOD_ID, "textures/entity/projectiles/oblivion_arrow.png")));
+        EntityRendererRegistry.register(ModEntityTypes.SIGHT_ARROW, ctx -> new CustomArrowRenderer(ctx, new Identifier(MOD_ID, "textures/entity/projectiles/sight_arrow.png")));
         EntityRendererRegistry.register(ModEntityTypes.CERAMIC_SHARD, CeramicShardRenderer::new);
     }
 }

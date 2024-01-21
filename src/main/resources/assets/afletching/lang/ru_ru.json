@@ -26,6 +26,15 @@
   "effect.afletching.confusion.desc2": "Работает с большинством сущностей.",
   "effect.afletching.confusion.desc3": "При попадании в игрока он не сможет открывать",
   "effect.afletching.confusion.desc4": "любой экран и переключать слоты",
+  "effect.afletching.all_seeing": "Всевиденье",
+  "effect.afletching.all_seeing.desc0": "Всевиденье - позволяет игроку",
+  "effect.afletching.all_seeing.desc1": "видеть невидимых сущностей",
+  "item.afletching.oblivion_arrow.desc0": "Навсегда стирает интеллект сущности.",
+  "item.afletching.oblivion_arrow.desc1": "При попадании в игрока навсегда",
+  "item.afletching.oblivion_arrow.desc2": "накладывает эффект §3запутанности§r",
+  "item.afletching.sight_arrow.desc0": "Делает сущность неспособной исчезнуть.",
+  "item.afletching.sight_arrow.desc1": "При попадании в игрока",
+  "item.afletching.sight_arrow.desc2": "накладывает эффект §2всевидения§r",
 
   "item.afletching.tnt_arrow": "Стрела-динамит",
   "item.afletching.glowing_arrow": "Светящаяся стрела",
@@ -34,5 +43,7 @@
   "item.afletching.beginner_arrow": "Стрела начинающего",
   "item.afletching.messenger_arrow": "Стрела-вестник",
   "item.afletching.crimson_arrow": "Багровая стрела",
-  "item.afletching.warped_arrow": "Искажённая стрела"
+  "item.afletching.warped_arrow": "Искажённая стрела",
+  "item.afletching.oblivion_arrow": "\"Забвение\"",
+  "item.afletching.sight_arrow": "\"Взгляд\""
 }
