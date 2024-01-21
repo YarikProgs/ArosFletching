@@ -39,7 +39,7 @@ public class MinecraftClientMixin {
     }
 
     @Unique
-    static boolean checkPlayer(PlayerEntity player) {
+    private static boolean checkPlayer(PlayerEntity player) {
         return player != null && !player.isCreative() && player.hasStatusEffect(ModEffects.CONFUSION);
     }
 }
