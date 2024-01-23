@@ -23,11 +23,6 @@ public class MinecraftClientMixin {
 
     @Shadow @Nullable public ClientPlayerEntity player;
 
-//    @Redirect(method = "handleInputEvents", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/MinecraftClient;setScreen(Lnet/minecraft/client/gui/screen/Screen;)V", ordinal = 1))
-//    private void setScreenRedirect(@NotNull MinecraftClient instance, Screen screen) {
-//        if (instance.player == null || !instance.player.hasStatusEffect(ModEffects.CONFUSION)) instance.setScreen(screen);
-//    }
-//
     @Redirect(method = "handleInputEvents", at = @At(value = "FIELD", target = "Lnet/minecraft/entity/player/PlayerInventory;selectedSlot:I"))
     private void setSlotRedirect(@NotNull PlayerInventory instance, int value) {
         if (!checkPlayer(instance.player)) instance.selectedSlot = value;

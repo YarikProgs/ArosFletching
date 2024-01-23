@@ -6,10 +6,10 @@ import net.minecraft.screen.slot.Slot;
 
 import java.util.function.Predicate;
 
-public class IngredientSlot extends Slot {
+public class PredicateSlot extends Slot {
     private final Predicate<ItemStack> predicate;
 
-    public IngredientSlot(Inventory inventory, int index, int x, int y, Predicate<ItemStack> predicate) {
+    public PredicateSlot(Inventory inventory, int index, int x, int y, Predicate<ItemStack> predicate) {
         super(inventory, index, x, y);
         this.predicate = predicate;
     }

@@ -15,8 +15,6 @@ public abstract class PlayerEntityMixin {
     private void tickInject(CallbackInfo ci) {
         PlayerEntity self = (PlayerEntity) (Object) this;
 
-        for (StatusEffectInstance effect : self.getStatusEffects()) {
-            if (effect.getEffectType() == ModEffects.RAGE) ((RageStatusEffect) effect.getEffectType()).playerTick(self);
-        }
+        for (StatusEffectInstance effect : self.getStatusEffects()) if (effect.getEffectType() == ModEffects.RAGE) ((RageStatusEffect) effect.getEffectType()).playerTick(self);
     }
 }

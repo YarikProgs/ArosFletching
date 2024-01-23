@@ -32,42 +32,37 @@ public class ModItems {
     public static final SightArrowItem SIGHT_ARROW = register("sight_arrow", new SightArrowItem());
 
     static <I extends Item> I register(String name, I item) {
-        return register(name, item, true);
-    }
+        DispenserBlock.registerBehavior(item, new ProjectileDispenserBehavior() {
+            @Override
+            protected ProjectileEntity createProjectile(World world, Position position, ItemStack stack) {
+                try {
+                    PersistentProjectileEntity proj = (PersistentProjectileEntity) Registry.ENTITY_TYPE.get(new Identifier(MOD_ID, name)).create(world);
+                    if (proj == null) return null;
+                    proj.setPosition(position.getX(), position.getY(), position.getZ());
+                    proj.pickupType = PersistentProjectileEntity.PickupPermission.ALLOWED;
 
-    static <I extends Item> I register(String name, I item, boolean registerDispenserBehavior) {
-        if (registerDispenserBehavior) {
-            DispenserBlock.registerBehavior(item, new ProjectileDispenserBehavior() {
-                @Override
-                protected ProjectileEntity createProjectile(World world, Position position, ItemStack stack) {
-                    try {
-                        PersistentProjectileEntity proj = (PersistentProjectileEntity) Registry.ENTITY_TYPE.get(new Identifier(MOD_ID, name)).create(world);
-                        if (proj == null) return null;
-                        proj.setPosition(position.getX(), position.getY(), position.getZ());
-                        proj.pickupType = PersistentProjectileEntity.PickupPermission.ALLOWED;
-
-                        if (proj instanceof TntArrowEntity tntArrow) {
-                            tntArrow.setExplosionPower(TntArrowItem.getExplosionPower(stack));
-                            tntArrow.setBreakingBlocks(TntArrowItem.isBreakingBlocks(stack));
-                        }
-                        if (proj instanceof GlowingArrowEntity glowingArrow) {
-                            glowingArrow.setLightLevel(GlowingArrowItem.getLightLevel(stack));
-                        }
-                        if (proj instanceof MessengerArrowEntity messengerArrow) {
-                            messengerArrow.setItems(stack.getOrCreateNbt().getList(MessengerArrowItem.ITEMS_KEY, NbtElement.COMPOUND_TYPE));
-                        }
-
-                        return proj;
-                    } catch (Exception e) {
-                        ArosFletching.LOGGER.error("Exception while creating projectile for dispenser, message: {}", e.getMessage());
-                        return null;
+                    if (proj instanceof TntArrowEntity tntArrow) {
+                        tntArrow.setExplosionPower(TntArrowItem.getExplosionPower(stack));
+                        tntArrow.setBreakingBlocks(TntArrowItem.isBreakingBlocks(stack));
                     }
+                    if (proj instanceof GlowingArrowEntity glowingArrow) {
+                        glowingArrow.setLightLevel(GlowingArrowItem.getLightLevel(stack));
+                    }
+                    if (proj instanceof MessengerArrowEntity messengerArrow) {
+                        messengerArrow.setItems(stack.getOrCreateNbt().getList(MessengerArrowItem.ITEMS_KEY, NbtElement.COMPOUND_TYPE));
+                    }
+
+                    return proj;
+                } catch (Exception e) {
+                    ArosFletching.LOGGER.error("Exception while creating projectile for dispenser, message: {}", e.getMessage());
+                    return null;
                 }
-            });
-        }
+            }
+        });
 
         return Registry.register(Registry.ITEM, new Identifier(MOD_ID, name), item);
     }
 
-    public static void init() {}
+    public static void init() {
+    }
 }

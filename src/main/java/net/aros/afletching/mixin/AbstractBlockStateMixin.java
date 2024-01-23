@@ -29,8 +29,6 @@ public abstract class AbstractBlockStateMixin {
     private void createScreenHandlerFactoryInject(World world, BlockPos pos, CallbackInfoReturnable<NamedScreenHandlerFactory> cir) {
         if (getBlock() != Blocks.FLETCHING_TABLE) return;
 
-        Text TITLE = Text.translatable("container.fletching");
-
         cir.setReturnValue(new ExtendedScreenHandlerFactory() {
             @Override
             public void writeScreenOpeningData(ServerPlayerEntity player, PacketByteBuf buf) {
@@ -39,7 +37,7 @@ public abstract class AbstractBlockStateMixin {
 
             @Override
             public Text getDisplayName() {
-                return TITLE;
+                return Text.translatable("container.fletching");
             }
 
             @Override

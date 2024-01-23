@@ -2,7 +2,7 @@ package net.aros.afletching.screen;
 
 import net.aros.afletching.init.ModOtherThings;
 import net.aros.afletching.recipes.FletchingRecipe;
-import net.aros.afletching.screen.widgets.IngredientSlot;
+import net.aros.afletching.screen.widgets.PredicateSlot;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.CraftingResultInventory;
@@ -46,11 +46,11 @@ public class FletchingScreenHandler extends ScreenHandler {
         this.context = ScreenHandlerContext.create(inventory.player.world, buf.readBlockPos());
         this.world = inventory.player.world;
         List<FletchingRecipe> recipes = world.getRecipeManager().listAllOfType(FletchingRecipe.Type.INSTANCE);
-        this.addSlot(new IngredientSlot(input, ARROWHEAD, 66, 17, stack -> recipes.stream().anyMatch(r -> r.getArrowhead().test(stack))));
-        this.addSlot(new IngredientSlot(input, SHAFT, 48, 35, stack -> recipes.stream().anyMatch(r -> r.getShaft().test(stack))));
-        this.addSlot(new IngredientSlot(input, FLETCHING, 30, 53, stack -> recipes.stream().anyMatch(r -> r.getFletching().test(stack))));
-        this.addSlot(new IngredientSlot(input, INGREDIENT_1, 48, 17, stack -> recipes.stream().anyMatch(r -> r.getIngredient1().test(stack))));
-        this.addSlot(new IngredientSlot(input, INGREDIENT_2, 66, 35, stack -> recipes.stream().anyMatch(r -> r.getIngredient2().test(stack))));
+        this.addSlot(new PredicateSlot(input, ARROWHEAD, 66, 17, stack -> recipes.stream().anyMatch(r -> r.getArrowhead().test(stack))));
+        this.addSlot(new PredicateSlot(input, SHAFT, 48, 35, stack -> recipes.stream().anyMatch(r -> r.getShaft().test(stack))));
+        this.addSlot(new PredicateSlot(input, FLETCHING, 30, 53, stack -> recipes.stream().anyMatch(r -> r.getFletching().test(stack))));
+        this.addSlot(new PredicateSlot(input, INGREDIENT_1, 48, 17, stack -> recipes.stream().anyMatch(r -> r.getIngredient1().test(stack))));
+        this.addSlot(new PredicateSlot(input, INGREDIENT_2, 66, 35, stack -> recipes.stream().anyMatch(r -> r.getIngredient2().test(stack))));
         this.addSlot(new Slot(output, OUTPUT, 124, 29) {
             @Override
             public boolean canInsert(ItemStack stack) {

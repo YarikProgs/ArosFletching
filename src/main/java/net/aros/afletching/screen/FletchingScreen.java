@@ -23,10 +23,7 @@ public class FletchingScreen extends HandledScreen<FletchingScreenHandler> {
         RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
         RenderSystem.setShaderTexture(0, TEXTURE);
 
-        int x = (this.width - backgroundWidth) / 2;
-        int y = (this.height - backgroundHeight) / 2;
-
-        drawTexture(matrices, x, y, 0, 0, backgroundWidth, backgroundHeight);
+        drawTexture(matrices, (this.width - backgroundWidth) / 2, (this.height - backgroundHeight) / 2, 0, 0, backgroundWidth, backgroundHeight);
     }
 
     @Override

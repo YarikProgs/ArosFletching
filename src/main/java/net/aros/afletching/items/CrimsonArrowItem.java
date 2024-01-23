@@ -29,10 +29,8 @@ public class CrimsonArrowItem extends ArrowItem {
         tooltip.add(Text.literal("♦ ").append(Text.translatable("crimson_arrow." + MOD_ID + ".effect")).formatted(Formatting.GRAY));
         tooltip.add(Text.empty());
 
-        if (!Screen.hasShiftDown())
-            tooltip.add(Text.literal("[SHIFT]").formatted(Formatting.GRAY));
-        else for (int i = 0; i < 4; i++)
-            tooltip.add(Text.translatable("effect." + MOD_ID + ".rage.desc" + i).formatted(Formatting.GRAY));
+        if (!Screen.hasShiftDown()) tooltip.add(Text.literal("[SHIFT]").formatted(Formatting.GRAY));
+        else for (int i = 0; i < 4; i++) tooltip.add(Text.translatable("effect." + MOD_ID + ".rage.desc" + i).formatted(Formatting.GRAY));
 
         super.appendTooltip(stack, world, tooltip, context);
     }

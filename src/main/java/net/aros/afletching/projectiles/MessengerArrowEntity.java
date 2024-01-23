@@ -37,9 +37,7 @@ public class MessengerArrowEntity extends PersistentProjectileEntity {
     }
 
     @Override
-    protected void age() {
-
-    }
+    protected void age() {}
 
     @Override
     protected void onEntityHit(EntityHitResult entityHitResult) {
