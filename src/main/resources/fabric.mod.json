@@ -3,7 +3,7 @@
   "id": "afletching",
   "version": "${version}",
 
-  "name": "Aros's fletching",
+  "name": "Aros' fletching",
   "description": "Use fletching table, create new types of arrows!",
   "authors": [
     "Aros"
