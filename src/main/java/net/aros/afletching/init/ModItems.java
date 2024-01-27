@@ -29,36 +29,43 @@ public class ModItems {
     public static final CrimsonArrowItem CRIMSON_ARROW = register("crimson_arrow", new CrimsonArrowItem());
     public static final WarpedArrowItem WARPED_ARROW = register("warped_arrow", new WarpedArrowItem());
     public static final OblivionArrowItem OBLIVION_ARROW = register("oblivion_arrow", new OblivionArrowItem());
-    public static final SightArrowItem SIGHT_ARROW = register("sight_arrow", new SightArrowItem());
+    public static final SightArrowItem SIGHT_ARROW = register("sight_arrow", new SightArrowItem(), false);
+    public static final EnchantedFeatherItem ENCHANTED_FEATHER = register("enchanted_feather", new EnchantedFeatherItem());
 
     static <I extends Item> I register(String name, I item) {
-        DispenserBlock.registerBehavior(item, new ProjectileDispenserBehavior() {
-            @Override
-            protected ProjectileEntity createProjectile(World world, Position position, ItemStack stack) {
-                try {
-                    PersistentProjectileEntity proj = (PersistentProjectileEntity) Registry.ENTITY_TYPE.get(new Identifier(MOD_ID, name)).create(world);
-                    if (proj == null) return null;
-                    proj.setPosition(position.getX(), position.getY(), position.getZ());
-                    proj.pickupType = PersistentProjectileEntity.PickupPermission.ALLOWED;
+        return register(name, item, true);
+    }
 
-                    if (proj instanceof TntArrowEntity tntArrow) {
-                        tntArrow.setExplosionPower(TntArrowItem.getExplosionPower(stack));
-                        tntArrow.setBreakingBlocks(TntArrowItem.isBreakingBlocks(stack));
-                    }
-                    if (proj instanceof GlowingArrowEntity glowingArrow) {
-                        glowingArrow.setLightLevel(GlowingArrowItem.getLightLevel(stack));
-                    }
-                    if (proj instanceof MessengerArrowEntity messengerArrow) {
-                        messengerArrow.setItems(stack.getOrCreateNbt().getList(MessengerArrowItem.ITEMS_KEY, NbtElement.COMPOUND_TYPE));
-                    }
+    static <I extends Item> I register(String name, I item, boolean dispenserBehaviour) {
+        if (dispenserBehaviour) {
+            DispenserBlock.registerBehavior(item, new ProjectileDispenserBehavior() {
+                @Override
+                protected ProjectileEntity createProjectile(World world, Position position, ItemStack stack) {
+                    try {
+                        PersistentProjectileEntity proj = (PersistentProjectileEntity) Registry.ENTITY_TYPE.get(new Identifier(MOD_ID, name)).create(world);
+                        if (proj == null) return null;
+                        proj.setPosition(position.getX(), position.getY(), position.getZ());
+                        proj.pickupType = PersistentProjectileEntity.PickupPermission.ALLOWED;
 
-                    return proj;
-                } catch (Exception e) {
-                    ArosFletching.LOGGER.error("Exception while creating projectile for dispenser, message: {}", e.getMessage());
-                    return null;
+                        if (proj instanceof TntArrowEntity tntArrow) {
+                            tntArrow.setExplosionPower(TntArrowItem.getExplosionPower(stack));
+                            tntArrow.setBreakingBlocks(TntArrowItem.isBreakingBlocks(stack));
+                        }
+                        if (proj instanceof GlowingArrowEntity glowingArrow) {
+                            glowingArrow.setLightLevel(GlowingArrowItem.getLightLevel(stack));
+                        }
+                        if (proj instanceof MessengerArrowEntity messengerArrow) {
+                            messengerArrow.setItems(stack.getOrCreateNbt().getList(MessengerArrowItem.ITEMS_KEY, NbtElement.COMPOUND_TYPE));
+                        }
+
+                        return proj;
+                    } catch (Exception e) {
+                        ArosFletching.LOGGER.error("Exception while creating projectile for dispenser, message: {}", e.getMessage());
+                        return null;
+                    }
                 }
-            }
-        });
+            });
+        }
 
         return Registry.register(Registry.ITEM, new Identifier(MOD_ID, name), item);
     }

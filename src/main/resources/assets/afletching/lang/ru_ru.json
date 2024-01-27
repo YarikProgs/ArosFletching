@@ -14,6 +14,9 @@
   "messenger_arrow.afletching.items": "Хранит один предмет. Стреляйте, посылайте!",
   "crimson_arrow.afletching.effect": "При попадании накладывает эффект §cярости§r",
   "warped_arrow.afletching.effect": "При попадании накладывает эффект §3запутанности§r",
+  "enchanted_feather.afletching.desc0": "ПКМ крадясь, чтобы свистнуть после",
+  "enchanted_feather.afletching.desc1": "попадания по сущности для её подсветки",
+  "enchanted_feather.afletching.hurts": "Бьёт сущность по свистку (ваш стак: %s)",
 
   "effect.afletching.rage": "Ярость",
   "effect.afletching.rage.desc0": "Ярость - моб становится агрессивным",
@@ -45,5 +48,6 @@
   "item.afletching.crimson_arrow": "Багровая стрела",
   "item.afletching.warped_arrow": "Искажённая стрела",
   "item.afletching.oblivion_arrow": "\"Забвение\"",
-  "item.afletching.sight_arrow": "\"Взгляд\""
+  "item.afletching.sight_arrow": "\"Взгляд\"",
+  "item.afletching.enchanted_feather": "Зачарованное перо"
 }

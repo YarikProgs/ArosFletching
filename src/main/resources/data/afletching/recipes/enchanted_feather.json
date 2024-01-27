@@ -1,0 +1,26 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " # ",
+        "GFG",
+        "#H#"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:lapis_lazuli"
+        },
+        "G": {
+            "item": "minecraft:glowstone_dust"
+        },
+        "F": {
+            "item": "minecraft:feather"
+        },
+        "H": {
+            "item": "minecraft:gold_nugget"
+        }
+    },
+    "result": {
+        "item": "afletching:enchanted_feather",
+        "count": 2
+    }
+}

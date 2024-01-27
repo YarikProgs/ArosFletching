@@ -7,8 +7,10 @@
     "AbstractBlockStateMixin",
     "FletchingTableBlockMixin",
     "MobEntityMixin",
+    "ModEntityDataSaverMixin",
     "PlayerEntityMixin",
-    "PlayerInventoryMixin"
+    "PlayerInventoryMixin",
+    "ShapedRecipeMixin"
   ],
   "client": [
     "InGameHudMixin",

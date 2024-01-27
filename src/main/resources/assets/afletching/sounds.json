@@ -8,5 +8,10 @@
     "sounds": [
       "afletching:break_entity"
     ]
+  },
+  "entity.player.whistle": {
+    "sounds": [
+      "afletching:whistle"
+    ]
   }
 }

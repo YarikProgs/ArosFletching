@@ -52,7 +52,7 @@ public class RageStatusEffect extends StatusEffect {
                 if (!item.isDamageable() || item.getMaxDamage() > item.getDamage() + 1) {
                     player.attack(entity);
                     player.swingHand(Hand.MAIN_HAND);
-                    if (player.getRandom().nextFloat() > .8) {
+                    if (player.getRandom().nextFloat() > .95) {
                         if (entity.isAlive()) entity.damage(DamageSource.player(player), 1);
                         player.addCritParticles(entity);
                     }

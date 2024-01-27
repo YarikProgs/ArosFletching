@@ -9,6 +9,7 @@ import static net.aros.afletching.ArosFletching.MOD_ID;
 public class ModSounds {
     public static final SoundEvent TERRACOTTA_ARROW_BLOCK_HIT = register(new Identifier(MOD_ID, "terracotta_arrow.block_hit"));
     public static final SoundEvent TERRACOTTA_ARROW_ENTITY_HIT = register(new Identifier(MOD_ID, "terracotta_arrow.entity_hit"));
+    public static final SoundEvent ENTITY_PLAYER_WHISTLE = register(new Identifier(MOD_ID, "entity.player.whistle"));
 
     static SoundEvent register(Identifier sound) {
         return Registry.register(Registry.SOUND_EVENT, sound, new SoundEvent(sound));

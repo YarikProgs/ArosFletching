@@ -1,0 +1,32 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#L#",
+        "GFG",
+        "LSL"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:gold_nugget"
+        },
+        "L": {
+            "item": "minecraft:lapis_lazuli"
+        },
+        "G": {
+            "item": "minecraft:glowstone_dust"
+        },
+        "F": {
+            "item": "minecraft:feather"
+        },
+        "S": {
+            "item": "minecraft:spectral_arrow"
+        }
+    },
+    "result": {
+        "item": "afletching:enchanted_feather",
+        "nbt": {
+            "HurtTarget": true
+        },
+        "count": 2
+    }
+}

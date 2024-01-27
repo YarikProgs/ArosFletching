@@ -14,6 +14,9 @@
   "messenger_arrow.afletching.items": "Stores one item. Shoot, send!",
   "crimson_arrow.afletching.effect": "When hit, applies §4rage§r effect",
   "warped_arrow.afletching.effect": "When hit, applies §3confusion§r effect",
+  "enchanted_feather.afletching.desc0": "Right click while sneaking to whistle",
+  "enchanted_feather.afletching.desc1": "after hitting entity highlight it",
+  "enchanted_feather.afletching.hurts": "Hurts target on whistle (your stack: %s)",
 
   "effect.afletching.rage": "Rage",
   "effect.afletching.rage.desc0": "Rage - the mob becomes aggressive",
@@ -45,5 +48,6 @@
   "item.afletching.crimson_arrow": "Crimson arrow",
   "item.afletching.warped_arrow": "Warped arrow",
   "item.afletching.oblivion_arrow": "\"The oblivion\"",
-  "item.afletching.sight_arrow": "\"The sight\""
+  "item.afletching.sight_arrow": "\"The sight\"",
+  "item.afletching.enchanted_feather": "Enchanted feather"
 }
