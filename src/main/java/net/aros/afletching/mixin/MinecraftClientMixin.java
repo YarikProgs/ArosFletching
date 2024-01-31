@@ -8,8 +8,8 @@ import net.aros.afletching.util.WhistleHelper;
 import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
 import net.fabricmc.fabric.api.networking.v1.PacketByteBufs;
 import net.minecraft.client.MinecraftClient;
-import net.minecraft.client.gui.screen.GameModeSelectionScreen;
 import net.minecraft.client.gui.screen.Screen;
+import net.minecraft.client.gui.screen.ingame.HandledScreen;
 import net.minecraft.client.network.ClientPlayerEntity;
 import net.minecraft.client.world.ClientWorld;
 import net.minecraft.entity.Entity;
@@ -48,7 +48,7 @@ public class MinecraftClientMixin {
 
     @Inject(method = "setScreen", at = @At("HEAD"), cancellable = true)
     private void setScreenInject(Screen screen, CallbackInfo ci) {
-        if (screen != null && !(screen instanceof GameModeSelectionScreen) && currentScreen == null && checkPlayer(player)) ci.cancel();
+        if (screen instanceof HandledScreen<?> && currentScreen == null && checkPlayer(player)) ci.cancel();
     }
 
     @Redirect(method = "doItemUse", at = @At(value = "INVOKE", target = "Lnet/minecraft/item/ItemStack;isEmpty()Z", ordinal = 1))
