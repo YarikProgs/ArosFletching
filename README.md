@@ -4,7 +4,7 @@
 Aros' fletching is about creating arrows with new different mechanics.
 
 # Where can I download it?
-You can download it from [Curseforge](https://www.curseforge.com/minecraft/mc-mods/aros-fletching)
+You can download it from [Curseforge](https://www.curseforge.com/minecraft/mc-mods/aros-fletching) and [Modrinth](https://modrinth.com/mod/aros-fletching)
 
 # Content
 Mod adds a few new arrows, including:
